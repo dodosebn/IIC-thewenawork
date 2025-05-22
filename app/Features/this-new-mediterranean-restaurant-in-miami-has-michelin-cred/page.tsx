@@ -1,5 +1,5 @@
 import React from 'react'
-import InfoTwo from './InfoTwo';
+import InfoTwo from './infoTwo';
 const page = () => {
   return (
     <div>

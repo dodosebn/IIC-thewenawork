@@ -1,5 +1,5 @@
+import InfoOne from "./infoOne";
 
-import InfoOne from "./InfoOne";
 const page = () => {
   return (
     <div>

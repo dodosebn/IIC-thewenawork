@@ -52,13 +52,13 @@ const Page = () => {
       {/* Navigation buttons */}
       <div className="fixed bottom-4 left-4 flex flex-col gap-2 z-50">
         <button
-          onClick={() => scrollToElement(topRef)}
+          // onClick={() => scrollToElement(topRef)}
           className="bg-black text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors shadow-md"
         >
           Top
         </button>
         <button
-          onClick={() => scrollToElement(section2Ref)}
+          // onClick={() => scrollToElement(section2Ref)}
           className="bg-black text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors shadow-md"
         >
           Section 2

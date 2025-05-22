@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../style/InfoStyle.css'
+// import '../../style/InfoStyle.css'
 import Slider from './slider/Slider';
 
 import { FaGlobe, FaInstagram, FaTiktok } from "react-icons/fa";

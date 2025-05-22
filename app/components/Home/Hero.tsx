@@ -1,14 +1,14 @@
 'use client'
 import React, { useState } from 'react';
 import Loading from '../Loading';
-import PreviewModal from '../preview-modal/PreviewModal'; // adjust path as needed
+// import PreviewModal from '../preview-modal/page';
 import AboutModal from '../../Features/NAVBAR/about-modal/AboutModal'; // optional if you want AboutModal too
 import Link from 'next/link';
 
 const videoUrl = '/assets/videos/section-bg-video.mp4';
 
 const Hero = () => {
-  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+  // const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false); // optional
 
   return (
@@ -27,11 +27,11 @@ const Hero = () => {
         <h1 className="text-4xl font-bold">Welcome to Wena</h1>
 
         {/* Pass toggle function to Loading button */}
-        <Loading onClick={() => setIsPreviewOpen(true)} />
+        <Loading/>
       </div>
 
       {/* Your modals */}
-      <PreviewModal isOpen={isPreviewOpen} onClose={() => setIsPreviewOpen(false)} />
+      {/* <PreviewModal isOpen={isPreviewOpen} onClose={() => setIsPreviewOpen(false)} /> */}
       <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
     </div>
     </div>
