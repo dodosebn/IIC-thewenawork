@@ -26,7 +26,7 @@ const InfoFive = () => {
             fill
             className="object-cover"
             priority
-          />
+          width={24} height={24} />
           <span className="absolute bottom-4 left-4 text-sm text-white/80 bg-black/50 px-2 py-1 rounded">
             Photography: Pablo Enriquez
           </span>
@@ -63,7 +63,7 @@ const InfoFive = () => {
             alt="home"
             fill
             className="object-cover"
-          />
+         width={24} height={24} />
         </div>
         <span className="text-sm text-gray-500">Photography: Pablo Enriquez</span>
       </div>
@@ -103,7 +103,7 @@ const InfoFive = () => {
                   alt="product"
                   fill
                   className="object-cover group-hover:scale-105 transition duration-500"
-                />
+               width={24} height={24} />
               </div>
               <span className="text-sm text-gray-500">Interiors, News</span>
               <p className="font-medium mt-1">The cedar-clad hillside home is decidedly Canadian in style — woody</p>

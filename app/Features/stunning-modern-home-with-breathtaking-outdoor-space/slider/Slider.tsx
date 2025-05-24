@@ -4,6 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 // import "../../../style/Slider.css";
 import { TbArrowsDiagonal } from "react-icons/tb";
 import SlideModal from "./SlideModal";
+import Image from "next/image";
 
 const images = [
   "assets/images/temp/header-image.jpg",
@@ -35,7 +36,7 @@ const Slider = () => {
         <div className="slider-container">
         <div className="slider-inner-container">
             <div className="slider">
-                <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+                <Image src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
               
             </div>
             <button className="prev" onClick={prevSlide}>

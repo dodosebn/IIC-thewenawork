@@ -4,6 +4,7 @@ import React from 'react';
 import Slider from './slider/Slider';
 
 import { FaGlobe, FaInstagram, FaTiktok } from "react-icons/fa";
+import Image from 'next/image';
 
 
 const InfoSix = () => {
@@ -18,7 +19,8 @@ const InfoSix = () => {
               </div>
             </div>
             <div  className='info-one-header-image'>
-                <img  src="/assets/images/temp/header-image-6.jpg" alt="header-image" />
+                <Image  src="/assets/images/temp/header-image-6.jpg" alt="header-image" width={24}  
+  height={24} />
                 <div className='header-image-info'>
                     <span>Photography: Pablo Enriquez</span>
                 </div>
@@ -53,11 +55,13 @@ const InfoSix = () => {
           
            <div className="image-text-container">
            <div className="image-container-single">
-                <img src="assets/images/temp/sample-1.jpg" alt="home" />
+                <Image src="assets/images/temp/sample-1.jpg" alt="home" width={24}  
+  height={24} />
+                
                 <span>Photography: Pablo Enriquez</span>
             </div>
             {/* <div className="image-container-single">
-                <img src="assets/images/temp/sample-2.jpg" alt="home" />
+                <Image src="assets/images/temp/sample-2.jpg" alt="home" width={30}/>
                 <span>Photography: Pablo Enriquez</span>
             </div>
             <div className="image-container-single">
@@ -77,7 +81,8 @@ const InfoSix = () => {
               <div className="footer-icons">
              
                 <div className="icon-container">
-                <img src="/assets/icons/x-icon-black.png" className="icon" alt="X" />
+                <Image src="/assets/icons/x-icon-black.png" className="icon" alt="X" width={24}  
+  height={24} />
                   <span>X</span>
                 </div>
                 <div className="icon-container">
@@ -101,28 +106,32 @@ const InfoSix = () => {
               <h1>SUPPORT US BY BUYING ONE OF THESE PRODUCTS </h1>
               <div className="production-grid">
                 <div className="product-container">
-                  <img src="assets/images/temp/sample-1.jpg" alt="product" />
+                  <Image src="assets/images/temp/sample-1.jpg" alt="product" width={24}  
+  height={24} />
                   <div className="product-text">
                     <span>Interiors, News</span>
                     <p>The cedar-clad hillside home is decidedly Canadian in style — woody</p>
                   </div>
                 </div>
                 <div className="product-container">
-                  <img src="assets/images/temp/sample-1.jpg" alt="product" />
+                  <Image src="assets/images/temp/sample-1.jpg" alt="product" width={24}  
+  height={24} />
                   <div className="product-text">
                     <span>Interiors, News</span>
                     <p>The cedar-clad hillside home is decidedly Canadian in style — woody</p>
                   </div>
                 </div>
                 <div className="product-container">
-                  <img src="assets/images/temp/sample-1.jpg" alt="product" />
+                  <Image src="assets/images/temp/sample-1.jpg" alt="product" width={24}  
+  height={24} />
                   <div className="product-text">
                     <span>Interiors, News</span>
                     <p>The cedar-clad hillside home is decidedly Canadian in style — woody</p>
                   </div>
                 </div>
                 <div className="product-container">
-                  <img src="assets/images/temp/sample-1.jpg" alt="product" />
+                  <Image src="assets/images/temp/sample-1.jpg" alt="product" width={24}  
+  height={24} />
                   <div className="product-text">
                     <span>Interiors, News</span>
                     <p>The cedar-clad hillside home is decidedly Canadian in style — woody</p>
@@ -171,4 +180,4 @@ const InfoSix = () => {
   )
 }
 
-export default InfoSix
+export default InfoSix;

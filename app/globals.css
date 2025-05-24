@@ -31,11 +31,9 @@ body {
 }
 @layer{
     /* index.css */
-    *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    .tailf{
+   padding: 5rem;
+   }
 /* Custom scrollbar styles */
 /* Custom scrollbar styles */
 .scrollbar-visible::-webkit-scrollbar {

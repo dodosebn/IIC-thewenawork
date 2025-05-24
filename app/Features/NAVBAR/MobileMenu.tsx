@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import "./MobileMenu.css";
 import { FaTiktok, FaYoutube } from "react-icons/fa";
 import AboutModal from "./about-modal/AboutModal";
+import Image from "next/image";
 
 // Define props interface
 interface MobileMenuProps {
@@ -40,9 +41,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, toggleMenu }) => {
 
           <div className="mobile-menu-icon-container">
             <FaTiktok className="icon" />
-            <img src="/assets/icons/instagram.svg" className="icon" alt="Instagram" />
-            <img src="/assets/icons/x-icon-black.png" className="icon-x" alt="X" style={{ marginTop: 2 }} />
-            <FaYoutube className="icon" />
+            <Image src="/assets/icons/instagram.svg" className="icon" alt="Instagram"   width={24}  // Required
+  height={24}/>
+  
+            <Image src="/assets/icons/x-icon-black.png" className="icon-x" 
+            alt="X" style={{ marginTop: 2 }}   width={24}  
+  height={24} />
+    <FaYoutube className="icon" />
           </div>
         </div>
       </div>

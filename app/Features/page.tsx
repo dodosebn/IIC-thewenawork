@@ -1,27 +1,25 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from 'react';
-import InfoOne from './interior-inspiration-to-kick-start-your-week/infoOne';
-import { FaArrowUp } from 'react-icons/fa';
-
-type ScrollableElement = HTMLDivElement;
+import React, { useRef, useEffect, useState } from "react";
+import InfoOne from "./interior-inspiration-to-kick-start-your-week/infoOne";
+import { FaArrowUp } from "react-icons/fa";
 
 const Page = () => {
-  const topRef = useRef<ScrollableElement>(null);
-  const section2Ref = useRef<ScrollableElement>(null);
+  const topRef = useRef<HTMLDivElement | null>(null);
+  const section2Ref = useRef<HTMLDivElement | null>(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
 
-  const scrollToElement = (elementRef: React.RefObject<ScrollableElement>) => {
+  const scrollToElement = (elementRef: React.RefObject<HTMLDivElement | null>) => {
     elementRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+      behavior: "smooth",
+      block: "start",
     });
   };
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -30,8 +28,8 @@ const Page = () => {
       setShowScrollButton(window.scrollY > 300);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -42,7 +40,7 @@ const Page = () => {
       </div>
 
       {/* Section 2 */}
-      <div 
+      <div
         ref={section2Ref}
         className="min-h-[500px] bg-gray-100 rounded-md shadow-inner flex items-center justify-center p-4"
       >
@@ -52,13 +50,13 @@ const Page = () => {
       {/* Navigation buttons */}
       <div className="fixed bottom-4 left-4 flex flex-col gap-2 z-50">
         <button
-          // onClick={() => scrollToElement(topRef)}
+          onClick={() => scrollToElement(topRef)}
           className="bg-black text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors shadow-md"
         >
           Top
         </button>
         <button
-          // onClick={() => scrollToElement(section2Ref)}
+          onClick={() => scrollToElement(section2Ref)}
           className="bg-black text-white px-3 py-2 rounded-md hover:bg-gray-800 transition-colors shadow-md"
         >
           Section 2

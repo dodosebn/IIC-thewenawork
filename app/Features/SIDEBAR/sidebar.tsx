@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import items from "./mapps";
@@ -17,6 +17,15 @@ const Sidebar: React.FC<SidebarProps> = ({
   activeIndex,
 }) => {
   const sidebarListRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Ensure window is available
+    setIsMobile(window.innerWidth <= 1178);
+    const handleResize = () => setIsMobile(window.innerWidth <= 1178);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleClick = (index: number) => {
     setActiveIndex(index);
@@ -33,7 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   return (
     <div className={`
       fixed top-0 left-0 w-[280px] bg-[#f5f5f5] h-screen flex flex-col z-20
-      ${window.innerWidth <= 1178 ? (isOpen ? "left-0" : "left-[-283px]") : ""}
+      ${isMobile ? (isOpen ? "left-0" : "left-[-283px]") : ""}
       transition-all duration-300 ease-in-out
     `}>
       {/* Sidebar Header */}
@@ -58,7 +67,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         "
       >
         {items.map((item, index) => (
-          <Link href={item.path} key={index} passHref>
+          <Link href={item.path} key={index} passHref legacyBehavior>
             <div className="flex justify-center px-4">
               <div
                 className={`
@@ -72,9 +81,11 @@ const Sidebar: React.FC<SidebarProps> = ({
                 <div className="relative w-full h-[150px] overflow-hidden mx-auto">
                   <Image
                     src={item.img}
-                    alt="Sidebar Item"
+                    alt={item.text || "Sidebar Item"}
                     fill
+                    sizes="(max-width: 768px) 100vw, 240px"
                     className="object-cover"
+                    priority={index < 3} // Prioritize loading first few images
                   />
                   {index === activeIndex && (
                     <div className="

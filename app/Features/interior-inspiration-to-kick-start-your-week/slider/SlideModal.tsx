@@ -4,6 +4,7 @@ import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaYoutube, FaPinterest } from "react-icons/fa";
 // import "../../../style/SliderModal.css";
 import { SlideModalProps } from "@/app/types";
+import Image from "next/image";
 
 const images = [
   "assets/images/temp/header-image.jpg",
@@ -34,7 +35,7 @@ const SlideModal = ({ isOpen, onClose }: SlideModalProps) => {
     <div className="modal-overlay">
       <div className="modal-content">
     <div className="modal-content-left">
-        <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} /> 
+        <Image src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} width={24} height={24} />
     </div>
 
         <div className="modal-sidebar">

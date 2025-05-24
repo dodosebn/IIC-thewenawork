@@ -3,6 +3,7 @@ import React from 'react';
 import Slider from './slider/Slider';
 
 import { FaGlobe, FaInstagram, FaTiktok } from "react-icons/fa";
+import Image from 'next/image';
 
 
 const InfoFour = () => {
@@ -107,21 +108,21 @@ const InfoFour = () => {
                   </div>
                 </div>
                 <div className="product-container">
-                  <img src="assets/images/temp/sample-1.jpg" alt="product" />
+                  <Image src="assets/images/temp/sample-1.jpg" alt="product" />
                   <div className="product-text">
                     <span>Interiors, News</span>
                     <p>The cedar-clad hillside home is decidedly Canadian in style — woody</p>
                   </div>
                 </div>
                 <div className="product-container">
-                  <img src="assets/images/temp/sample-1.jpg" alt="product" />
+                  <Image src="assets/images/temp/sample-1.jpg" alt="product" width={24} height={24} />
                   <div className="product-text">
                     <span>Interiors, News</span>
                     <p>The cedar-clad hillside home is decidedly Canadian in style — woody</p>
                   </div>
                 </div>
                 <div className="product-container">
-                  <img src="assets/images/temp/sample-1.jpg" alt="product" />
+                  <img src="assets/images/temp/sample-1.jpg" alt="product" width={24} height={24} />
                   <div className="product-text">
                     <span>Interiors, News</span>
                     <p>The cedar-clad hillside home is decidedly Canadian in style — woody</p>

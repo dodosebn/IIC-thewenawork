@@ -1,16 +1,10 @@
-import React from 'react';
-
-interface LoadingProps {
-  onClick: () => void;
-}
+import React from "react";
 
 const Loading = () => {
   return (
     <button
-      // onClick={onClick}
-      className="flex items-center gap-2 px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+      className="bg-teal-600 hover:bg-teal-700 text-white font-medium px-8 py-4 tailfuck rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
     >
-      <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
       View Africa's Metrics
     </button>
   );

@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 // import "./NavBar.css";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
 
 interface NavBarProps {
   isSidebarOpen: boolean;
@@ -52,7 +53,8 @@ const NavBar: React.FC<NavBarProps> = ({ isSidebarOpen, toggleSidebar, pageTitle
             <div className="navbar-title-right">
               <span>SHARE THIS:</span>
               <div className="navbar0title-right-icons">
-                <img src="/assets/icons/x-icon-black.png" className="icon" alt="X" />
+                <Image src="/assets/icons/x-icon-black.png" className="icon" alt="X" width={24}  
+  height={24} />
                 <FaFacebookF className="icon" />
               </div>
             </div>
@@ -78,16 +80,22 @@ const NavBar: React.FC<NavBarProps> = ({ isSidebarOpen, toggleSidebar, pageTitle
               <div className="icon-nav-dropdown">
                 <div className="dropdown-trigger">
                   <div className="right-nav-icon">
-                    <img src="/assets/icons/instagram.svg" className="icon" alt="Instagram" />
-                    <img src="/assets/icons/x-icon-black.png" className="x-icon" alt="X" style={{ marginTop: 2 }} />
+                    <Image src="/assets/icons/instagram.svg" className="icon" alt="Instagram" width={24}  
+  height={24} /> 
+                    <Image src="/assets/icons/x-icon-black.png" className="x-icon" alt="X"
+                     style={{ marginTop: 2 }} width={24}  
+  height={24} />
                     <FaYoutube className="icon" />
                   </div>
 
                   <div className="chevron-dropdown">
-                    <img src="/assets/icons/ios-arrow-down.svg" className="icon arrow-down" alt="arrow-down" style={{ marginTop: 6 }} />
-                    <div className="chevron-dropdown-menu">
+                    <Image src="/assets/icons/ios-arrow-down.svg" className="icon arrow-down" alt="arrow-down"
+                     style={{ marginTop: 6 }} width={24}  
+  height={24} />
+                   <div className="chevron-dropdown-menu">
                       <div className="icon-container">
-                        <img src="/assets/icons/x-icon-black.png" className="icon" alt="X" />
+                        <Image src="/assets/icons/x-icon-black.png" className="icon" alt="X" width={24}  
+  height={24} />
                         <span>X</span>
                       </div>
                       <div className="icon-container">
@@ -110,7 +118,8 @@ const NavBar: React.FC<NavBarProps> = ({ isSidebarOpen, toggleSidebar, pageTitle
               <div className="dropdown">
                 <div className="dropdown-trigger">
                   <span>INFO</span>
-                  <img src="/assets/icons/ios-arrow-down.svg" className="icon arrow-down" alt="arrow-down" />
+                  <Image src="/assets/icons/ios-arrow-down.svg" className="icon arrow-down" alt="arrow-down" width={24}  
+  height={24} />
                 </div>
                 <div className="dropdown-menu">
                   <a href="#" role="button" onClick={() => setIsAboutOpen(true)}>WENA</a>
